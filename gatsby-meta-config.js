@@ -3,7 +3,7 @@ module.exports = {
   description: `개발과 관련된 평소 생각을 정리해서 쓰는 공간입니다`,
   author: `[joon hwan]`,
   introduction: `Interested with python, django, serverless architecture, machine learning. I love Automation, development website or web service. `,
-  siteUrl: `https://gatsby-starter-bee.netlify.com`, // Your blog site url
+  siteUrl: `https://pypy.dev`, // Your blog site url
   social: {
     twitter: ``, // Your Twitter account
     github: `xncbf`, // Your GitHub account
