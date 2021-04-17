@@ -1,7 +1,7 @@
 ---
 title: 높은 트래픽 유저를 수용하는 확장 가능한 시스템 설계 wigh AWS
 date: 2021-04-17 14:04:15
-category: 개발
+category: web
 thumbnail: { thumbnailSrc }
 draft: false
 ---

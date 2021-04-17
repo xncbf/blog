@@ -1,5 +1,5 @@
 module.exports = {
-  title: `개발블로그`,
+  title: `dev`,
   description: `개발과 관련된 평소 생각을 정리해서 쓰는 공간입니다`,
   author: `[joon hwan]`,
   introduction: `Interested with python, django, serverless architecture, machine learning. I love Automation, development website or web service. `,
