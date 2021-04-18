@@ -16,7 +16,7 @@ draft: false
 
 다음 endpoint 의 `GET` API 를 요청했을때 29.99초가 걸리는 것을 확인할 수 있었습니다 (`messages` 테이블의 rows 수는 현재 시점으로 약 3백만개)
 
-`[message_search=hi&page_size=12](http://127.0.0.1:8000/travelflan/messages?ordering=-timestamp&message_search=hi&page_size=12)`
+`message_search=hi&page_size=12`
 
 ![](./images/2-1.png)
 
@@ -112,13 +112,13 @@ def get(self, request, format=None, **kwargs):
     page = self.paginate_queryset(objs)  # 이 부분으로 변경되었습니다
 ```
 
-debug_toolbar 에서 확인하기 위해 브라우저에서 API를 그대로 입력했습니다
+`debug_toolbar` 에서 확인하기 위해 브라우저에서 API를 그대로 입력했습니다
 
 총 25개의 쿼리 중에서 20개가 비슷하고 2개가 중복 되었다고 합니다.
 
 ![](./images/2-3.png)
 
-문제가 많았지만 (N+1 쿼리 문제는 다른 포스팅에서 다루겠습니다) 제일 큰 문제가 되는 것은 맨 아래 8.79 ms 걸린 쿼리였습니다. 58초 이상 걸리는 저 쿼리는 실제로 확인해보니 소요되는 시간이 2초도 안 걸렸습니다. (디버그 툴바의 버그인것 같습니다)
+문제가 많았지만 (N+1 쿼리 문제는 다른 포스팅에서 다루겠습니다) 제일 큰 문제가 되는 것은 맨 아래 8.79 ms 걸린 쿼리였습니다. 58초 이상 걸리는 저 쿼리는 실제로 확인해보니 소요되는 시간이 2초도 안 걸렸습니다. (디버그 툴바의 버그인것으로 보입니다.)
 
 ![](./images/2-4.png)
 
