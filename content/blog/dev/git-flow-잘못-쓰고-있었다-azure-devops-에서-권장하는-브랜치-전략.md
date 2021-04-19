@@ -14,8 +14,9 @@ git 을 관리하는 기법이 정해진것은 없겠지만 그동안 제가 git
 
 git flow 는 git 을 관리하는 도구 중 하나입니다.
 ![](./images/4-0.png)
-이 글은 제 생각에 git flow 를 제일 잘 설명한 글입니다
+
 [git flow cheatsheet](https://danielkummer.github.io/git-flow-cheatsheet/index.ko_KR.html)
+위 글은 제가 생각하기에 git flow 를 제일 잘 설명한 글입니다
 
 # 왜 git flow 를 사용했나요?
 
@@ -51,7 +52,7 @@ merge 를 했으니 이미 develop 에 반영된 상태이기 때문에 `git flo
 
 그래서 새롭게 찾아보았습니다
 
-# trunk based development 브랜치 전략
+# trunk based development
 
 [trunk based development](https://trunkbaseddevelopment.com/) 는 [azure devops 에서 추천하는 개발 전략](https://docs.microsoft.com/en-us/azure/devops/learn/devops-at-microsoft/release-flow)입니다
 
@@ -77,8 +78,14 @@ merge 를 했으니 이미 develop 에 반영된 상태이기 때문에 `git flo
 
 ## 스프린트 이동
 
-- 3주 후 새로운 스프린트에 기능 추가를 마치면 배포하기 위해 `releases/n+1` 브랜치를 만들고 배포합니다.
-- 이 상황에서 핫픽스가 발생하는 경우 n 브랜치와 n+1 브랜치에 둘 다 배포합니다.
-- 스프린트 배포가 완료되면 n 브랜치 이전의 브랜치는 완전히 버려집니다.
+1. 3주 후 새로운 스프린트에 기능 추가를 마치면 배포하기 위해 `releases/n+1` 브랜치를 만들고 배포합니다.
+2. 이 상황에서 핫픽스가 발생하는 경우 n 브랜치와 n+1 브랜치에 둘 다 배포합니다.
+3. 스프린트 배포가 완료되면 n 브랜치 이전의 브랜치는 완전히 버려집니다.
 
 > 롤백하는 상황을 위해 n 브랜치를 남겨놓는것이라고 생각하는데 확실히 이해가 되지 않았습니다 아시는분은 코멘트 부탁드리겠습니다
+
+# 결론
+
+정확히 이해하지 못하고 무작정 따라한 결과 새로운 개발 전략을 도입하게 되었습니다.
+남들이 쓰니까 나도 쓴다는 생각을 고쳐야할 것 같습니다.
+이 배포 전략을 수개월 사용해보고 후기를 남기갰습니다.
