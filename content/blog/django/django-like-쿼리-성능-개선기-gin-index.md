@@ -14,7 +14,7 @@ draft: false
 
 ![](./images/2-0.png)
 
-다음 endpoint 의 `GET` API 를 요청했을때 29.99초가 걸리는 것을 확인할 수 있었습니다 (`messages` 테이블의 rows 수는 현재 시점으로 약 3백만개)
+다음 endpoint 의 `GET` API 를 요청했을때 29.99초가 걸리는 것을 확인할 수 있었습니다
 
 `message_search=hi&page_size=12`
 
