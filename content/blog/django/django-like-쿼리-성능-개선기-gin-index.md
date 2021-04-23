@@ -1,6 +1,6 @@
 ---
 title: Django like 쿼리 성능 개선기 GIN Index
-date: 2021-04-18 14:04:94
+date: 2020-03-18 14:04:94
 category: django
 thumbnail: { thumbnailSrc }
 draft: false
