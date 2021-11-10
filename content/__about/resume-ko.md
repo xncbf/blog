@@ -95,29 +95,36 @@ lang: 'ko'
 
 ## Django
 
-- GitHub: <https://github.com/django/django>
+> Deadline 이 있는 완벽주의자를 위한 웹 프레임워크.
 
-Deadline 이 있는 완벽주의자를 위한 웹 프레임워크.
-postgres rangefields 의 범위 설명을 명확히 하는 ([Ticket]](https://code.djangoproject.com/ticket/31577))
-([Translated content becomes ugly due to line-down on new admin side-bar](https://code.djangoproject.com/ticket/32141))
-([Raise a descriptive error on update()/delete() operations following QuerySet.union(), intersection(), and difference().](https://code.djangoproject.com/ticket/31148))
+GitHub: <https://github.com/django/django>
+
+### Contributes
+
+- postgres rangefields 의 범위 설명을 명확히 하는 [Ticket](https://code.djangoproject.com/ticket/31577)
+- [Translated content becomes ugly due to line-down on new admin side-bar](https://code.djangoproject.com/ticket/32141)
+- [Raise a descriptive error on update()/delete() operations following QuerySet.union(), intersection(), and difference().](https://code.djangoproject.com/ticket/31148)
 
 ## Zappa
 
-- GitHub: <https://github.com/zappa/zappa>
-- _React, Gatsby_
+> python을 위한 serverless 프레임워크
 
-python을 위한 serverless 프레임워크
-([Coldstart can be drastically reduced by calling LambdaHandler externally](https://github.com/zappa/Zappa/pull/982))
+GitHub: <https://github.com/zappa/zappa>
+
+### Contributes
+
+- [Coldstart can be drastically reduced by calling LambdaHandler externally](https://github.com/zappa/Zappa/pull/982)
 
 ## Django-allauth
 
-- GitHub: <https://github.com/zappa/zappa>
-- _React, Gatsby_
+> 다양한 social oauth를 위한 3rd party 라이브러리
 
-다양한 social oauth를 위한 3rd party 라이브러리
-([Added Daum OAuth2](https://github.com/pennersr/django-allauth/pull/1693))
-([Naver's extract_common_fields should be deleted.](https://github.com/pennersr/django-allauth/pull/1617))
+GitHub: <https://github.com/zappa/zappa>
+
+### Contributes
+
+- [Added Daum OAuth2](https://github.com/pennersr/django-allauth/pull/1693)
+- [Naver's extract_common_fields should be deleted.](https://github.com/pennersr/django-allauth/pull/1617)
 
 <br />
 
