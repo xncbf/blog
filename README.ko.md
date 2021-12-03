@@ -62,7 +62,7 @@ In this template...
       <li>Let's doodle: https://duduling-blog.netlify.app/</li>
       <li>Hong_Devlog: https://hong-dev.github.io/</li>
       <li>samsara-ku's devlog: https://samsara-ku.dev/</li>
-      <li>sundo.kim: https://sundo.kim/</li>
+      <li>muse.kim: https://muse.kim/</li>
       <li>Juunone's devlog: https://juunone.netlify.app/</li>
       <li>cereme.dev: https://cereme.dev</li>
       <li>taekki.dev: https://taekki.dev</li>
@@ -71,6 +71,7 @@ In this template...
       <li>KSP Blog: https://ksp.now.sh</li>
       <li>bobs log: https://undefine.me</li>
       <li>Jane's PS Blog: https://janeljs.github.io</li>
+      <li>hedrinker's devlog: https://hexdrinker.dev</li>
     </ul>
   </p>
 </details>
