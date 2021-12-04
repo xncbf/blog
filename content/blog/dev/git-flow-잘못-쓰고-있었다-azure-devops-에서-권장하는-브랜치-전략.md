@@ -6,19 +6,19 @@ thumbnail: { thumbnailSrc }
 draft: false
 ---
 
-# 개요
+## 개요
 
 git 을 관리하는 기법이 정해진것은 없겠지만 그동안 제가 git flow 를 사용하면서 느꼈던점을 정리해 보려고 합니다
 
-# git flow 가 뭔가요?
+## git flow 가 뭔가요?
 
 git flow 는 git 을 관리하는 도구 중 하나입니다.
-![](./images/4-0.png)
+![image](./images/4-0.png)
 
 [git flow cheatsheet](https://danielkummer.github.io/git-flow-cheatsheet/index.ko_KR.html)
 위 글은 제가 생각하기에 git flow 를 제일 잘 설명한 글입니다
 
-# 왜 git flow 를 사용했나요?
+## 왜 git flow 를 사용했나요?
 
 시작은 이 글이었습니다. [우린 Git-flow를 사용하고 있어요](https://woowabros.github.io/experience/2017/10/30/baemin-mobile-git-branch-strategy.html)
 
@@ -28,7 +28,7 @@ git flow 는 git 을 관리하는 도구 중 하나입니다.
 
 저희 팀은 jira 대신 azure devops(구 vsts) 를 사용했고 git flow 설명에 나온대로 티켓마다 feature/\* 브랜치를 생성해 작업하고, 시스템에서 머지하는 방식을 채택했습니다.
 
-# 어떤 점이 안좋았나요?
+## 어떤 점이 안좋았나요?
 
 git flow 를 있는 그대로 사용하면 `git flow feature start` 와 같은 명령어로 시작하고 `git flow feature finish` 로 닫아야 합니다.
 
@@ -42,7 +42,7 @@ merge 를 했으니 이미 develop 에 반영된 상태이기 때문에 `git flo
 
 `hotfix` 또는 `release` 브랜치를 `master` 에 직접 머지해야 한다는 불안감도 있었습니다.
 
-# 그럼 finish 만 안쓰면 되는거 아닌가요?
+## 그럼 finish 만 안쓰면 되는거 아닌가요?
 
 이런 문제를 겪으면서 git flow 를 쓰는게 맞는것인가 하는 근본적인 의문점이 생겼습니다.
 
@@ -52,13 +52,13 @@ merge 를 했으니 이미 develop 에 반영된 상태이기 때문에 `git flo
 
 그래서 새롭게 찾아보았습니다
 
-# trunk based development
+## trunk based development
 
 [trunk based development](https://trunkbaseddevelopment.com/) 는 [azure devops 에서 추천했던 개발 전략](https://docs.microsoft.com/en-us/azure/devops/learn/devops-at-microsoft/release-flow)입니다
 
 요약하자면 다음과 같습니다
 
-## 개발
+### 개발
 
 1. 모든 브랜치는 master 브랜치에서 파생됩니다. (모든 개발은 기존 develop 브랜치로 머지되던것과 다르게 master 로 머지됩니다.)
 2. 새로운 기능은 `users/<username>/feature` 브랜치를 사용합니다.
@@ -67,7 +67,7 @@ merge 를 했으니 이미 develop 에 반영된 상태이기 때문에 `git flo
 5. master 로 머지 후 시간이 더 많이 걸리는 추가 승인 테스트 실행
 6. master 브랜치에서 계속 개발하고 스프린트 케이던스에 맞춰 3주 단위로 릴리즈합니다
 
-## 릴리즈
+### 릴리즈
 
 - `releases/n` 브랜치를 생성하고 이 브랜치에서 직접 배포합니다.
 
@@ -76,13 +76,13 @@ merge 를 했으니 이미 develop 에 반영된 상태이기 때문에 `git flo
 1. 일반적인 개발 플로우와 동일하게 master 에서 분기를 만들고, 리뷰 후 master 에 머지합니다
 2. master 에서 가장 마지막에 릴리즈되었던 `releases/n` 브랜치로 해당 핫픽스만 체리픽합니다.
 
-## 스프린트 이동
+### 스프린트 이동
 
 1. 3주 후 새로운 스프린트에 기능 추가를 마치면 배포하기 위해 `releases/n+1` 브랜치를 만들고 배포합니다.
 2. 이 상황에서 핫픽스가 발생하는 경우 n 브랜치와 n+1 브랜치에 둘 다 배포합니다.
 3. 스프린트 배포가 완료되면 n 브랜치 이전의 브랜치는 완전히 버려집니다.
 
-# 결론
+## 결론
 
 정확히 이해하지 못하고 무작정 따라한 결과 새로운 개발 전략을 도입하게 되었습니다.
 

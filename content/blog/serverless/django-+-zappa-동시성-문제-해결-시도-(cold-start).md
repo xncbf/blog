@@ -6,31 +6,31 @@ thumbnail: { thumbnailSrc }
 draft: false
 ---
 
-# Zappa 란?
+## Zappa 란?
 
 [zappa](https://github.com/zappa/Zappa) 는 파이썬 코드를 aws lambda 에서 쉽게 웹서비스 할 수 있도록 만들어주는 패키지이다
 
-# 발생한 문제점
+## 발생한 문제점
 
 lambda 동시 호출 수가 늘어날때 lambda 에서 자동으로 스케일업을 해주는데, 이때 접속한 유저는 timeout (약 10초) 을 경험함 (오른쪽 표시된 부분의 바닥의 울퉁불퉁한 부분이 그것이다)
 
-![](<./images/django-+-zappa-동시성-문제-해결-시도-(cold-start)-0.png>)
+![image](<./images/django-+-zappa-동시성-문제-해결-시도-(cold-start)-0.png>)
 
-# 문제 발생 원인
+## 문제 발생 원인
 
-## cold start
+### cold start
 
 lambda 에서 스케일업을 할때 cold start 가 발생하는데, 문서에 따르면 python 의 cold start 시간은 길어봐야 0.5초 내외인것을 확인할 수 있다
 
-![](<./images/django-+-zappa-동시성-문제-해결-시도-(cold-start)-1.png>)
+![image](<./images/django-+-zappa-동시성-문제-해결-시도-(cold-start)-1.png>)
 
-## 그렇다면 나는 왜?
+### 그렇다면 나는 왜?
 
 이번 이슈는 lambda 의 한계점 때문에 발생한 이슈이다
 
 [lambda는 저장공간의 제약](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-limits.html)이 있다
 
-![](<./images/django-+-zappa-동시성-문제-해결-시도-(cold-start)-2.png>)
+![image](<./images/django-+-zappa-동시성-문제-해결-시도-(cold-start)-2.png>)
 
 배포할때 패키지의 크기가 50MB 를 넘으면 zappa 에서 제공하는 slim handler 기능을 이용해서 512MB 까지는 업로드할 수 있도록 해주는데
 
@@ -42,33 +42,33 @@ s3에서 다운로드하는 부분이 느려서 발생한 원인이라고 판단
 
 concurrent executations 가 튈때마다 duration 이 8초로 튀는것을 확인할수있다.
 
-![](<./images/django-+-zappa-동시성-문제-해결-시도-(cold-start)-3.png>)
+![image](<./images/django-+-zappa-동시성-문제-해결-시도-(cold-start)-3.png>)
 
-![](<./images/django-+-zappa-동시성-문제-해결-시도-(cold-start)-4.png>)
+![image](<./images/django-+-zappa-동시성-문제-해결-시도-(cold-start)-4.png>)
 
-# 시도해본것들
+## 시도해본것들
 
-## efs
+### efs
 
 파일시스템을 로드해놓고 동일한 vpc를 가진 lambda 에서 빠르게 마운트해서 사용하는 기능이다
 
 lambda 는 vpc 를 가지면 public access 가 불가능하기 때문에 지금 상황과는 맞지 않아 적용하지 않기로 했다 (NAT 게이트웨이를 사용해서 public 아웃바운드 할 수는 있다)
 
-## 프로젝트 사이즈 줄이기
+### 프로젝트 사이즈 줄이기
 
 압축된 패키지 사이즈를 50MB 이하로 줄여서 slim handler 기능을 사용하지 않으면 (아마도 이론상) s3 로 업로드 하지않고 handler 에서 바로 구동할것이고 1초 이내로 로드가 가능할 것 같았다
 
 slim_handler 기능을 제거하고 테스트해 본 결과는 똑같았다
 
-![](<./images/django-+-zappa-동시성-문제-해결-시도-(cold-start)-5.png>)
+![image](<./images/django-+-zappa-동시성-문제-해결-시도-(cold-start)-5.png>)
 
-![](<./images/django-+-zappa-동시성-문제-해결-시도-(cold-start)-6.png>)
+![image](<./images/django-+-zappa-동시성-문제-해결-시도-(cold-start)-6.png>)
 
 유저가 늘어나면 늘어날수록 동시에 응답시간도 점차 늘어났다
 
-![](<./images/django-+-zappa-동시성-문제-해결-시도-(cold-start)-7.png>)
+![image](<./images/django-+-zappa-동시성-문제-해결-시도-(cold-start)-7.png>)
 
-## container
+### container
 
 작년 말에 새롭게 도입된 기능이다.
 
@@ -80,7 +80,7 @@ zappa 가 만들어주는 패키지를 컨테이너로 감싸 실행해보았다
 
 하지만 실행해보니 여전히 지연이 존재했다.
 
-## 프로비저닝된 동시성 구성
+### 프로비저닝된 동시성 구성
 
 cold start 가 느린것이니 미리 띄워놓으면 starting initaiation time 을 줄일 수 있지 않을까?
 
@@ -135,9 +135,9 @@ zappa 레포 주인이 업데이트를 잘 안해주어서 일단 해결될때�
 
 ![](<./images/django-+-zappa-동시성-문제-해결-시도-(cold-start)-11.png>)
 
-# lambda와 별개로 시도한것들
+## lambda와 별개로 시도한것들
 
-## RDS 의 read replication 을 생성
+### RDS 의 read replication 을 생성
 
 RDS 는 조금만 커밋이 늘어나도 금방 CPU 로드가 100을 찍는 경험을 할수 있었다
 
@@ -145,19 +145,19 @@ RDS 는 조금만 커밋이 늘어나도 금방 CPU 로드가 100을 찍는 경�
 
 딱 나눈만큼 정직하게 부하가 줄어들었다
 
-## 최대한 모든 api 를 캐싱
+### 최대한 모든 api 를 캐싱
 
 인메모리 디비(elastic cache) 를 사용해서 동일하게 반복되는 api 의 response 를 캐싱했다
 
 DB의 부하가 효과적으로 줄어들었다
 
-## RDS proxy 생성
+### RDS proxy 생성
 
 RDS proxy 를 사용하면 DB 커넥션 풀을 효과적으로 사용할 수 있는 것 같다
 
 rds proxy 는 동일한 vpc 내에 있어야한다 고로 vpc 를 생성해야하는 efs 와 동일한 이유로 선택하지않았다 VPC 를 구성할 때 고려할 만한 선택지인 것 같다
 
-# 마무리
+## 마무리
 
 실행시점에 따라서 7~9초나 달라지는것은 이해가 안되지만 우연히 발견한 방법으로 실행시간을 줄일 수 있었다
 

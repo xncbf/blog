@@ -6,21 +6,21 @@ thumbnail: { thumbnailSrc }
 draft: false
 ---
 
-# 문제 확인
+## 문제 확인
 
 ---
 
 사내 메세지 플랫폼에 메세지 검색이 안된다는 이슈가 올라와서 확인해보니 특정 API의 응답이 유독 오래 걸리는 문제가 있었습니다
 
-![](./images/2-0.png)
+![image](./images/2-0.png)
 
 다음 endpoint 의 `GET` API 를 요청했을때 29.99초가 걸리는 것을 확인할 수 있었습니다
 
 `message_search=hi&page_size=12`
 
-![](./images/2-1.png)
+![image](./images/2-1.png)
 
-# DEBUG
+## DEBUG
 
 ---
 
@@ -68,13 +68,13 @@ if DEBUG:
 
 [`http://127.0.0.1:8000/swagger/`](http://127.0.0.1:8000/swagger/) 접속 시 오른쪽 탭에 새롭게 메뉴가 생긴 것을 확인할 수 있었습니다.
 
-![](./images/2-2.png)
+![image](./images/2-2.png)
 
 아쉽게도 swagger 에서는 debug-toolbar 가 제대로 작동되지 않아서 restframework `DEFAULT_RENDERER_CLASSES` 세팅에 `rest_framework.renderers.BrowsableAPIRenderer` 를 추가해주었습니다.
 
 문제가 되는 API 에 매핑된 뷰는 `MessagesListView` 이고 브라우저에서 확인하기 위해 권한을 로컬에서만 살며시 `AllowAny` 로 변경해주었습니다.
 
-# 병목 지점 확인하기
+## 병목 지점 확인하기
 
 ---
 
@@ -116,11 +116,11 @@ def get(self, request, format=None, **kwargs):
 
 총 25개의 쿼리 중에서 20개가 비슷하고 2개가 중복 되었다고 합니다.
 
-![](./images/2-3.png)
+![image](./images/2-3.png)
 
 문제가 많았지만 (N+1 쿼리 문제는 다른 포스팅에서 다루겠습니다) 제일 큰 문제가 되는 것은 맨 아래 8.79 ms 걸린 쿼리였습니다. 58초 이상 걸리는 저 쿼리는 실제로 확인해보니 소요되는 시간이 2초도 안 걸렸습니다. (디버그 툴바의 버그인것으로 보입니다.)
 
-![](./images/2-4.png)
+![image](./images/2-4.png)
 
 쿼리를 단순화 해보면 다음과 같은 쿼리입니다. 실행하니 28초가 소요되었습니다
 
@@ -132,11 +132,11 @@ WHERE (to_tsvector(COALESCE("flanb_messages"."message", '')) @@ (plainto_tsquery
 ORDER BY "flanb_messages"."timestamp" DESC
 ```
 
-# 속도 개선
+## 속도 개선
 
 ---
 
-## timestamp 필드 인덱싱 해보기
+### timestamp 필드 인덱싱 해보기
 
 drf 에서 제공하는 CursorPagination 을 제대로 사용하기 위해서는 데이터베이스 인덱스가 걸려 있어야 한다고 합니다[(링크)](https://www.django-rest-framework.org/api-guide/pagination/#cursorpagination). 오더링에 사용 되는 `timestamp` 컬럼에 인덱스가 걸려 있지 않아서 다음과 같이 인덱스를 걸어 주었습니다.
 
@@ -152,7 +152,7 @@ timestamp 인덱싱 후에도 속도가 크게 개선되지 않아 찾아보던 
 
 `message` 필드를 full text search 를 하기 위해서 [링크](https://www.postgresql.org/docs/9.5/textsearch-tables.html#TEXTSEARCH-TABLES-INDEX)에 나오는 대로 GIN index를 생성했습니다
 
-## tsvector 컬럼 생성
+### tsvector 컬럼 생성
 
 새롭게 tsvector 타입의 컬럼을 생성했습니다
 
@@ -201,7 +201,7 @@ WHERE tsv_message @@ (plainto_tsquery('hi')) = true
 ORDER BY "flanb_messages"."timestamp" DESC
 ```
 
-# Django 에서 활용하기
+## Django 에서 활용하기
 
 ---
 
@@ -270,4 +270,4 @@ operations = [
 
 배포 후 API 호출시 매우 빠르게 호출되는 모습을 확인할 수 있었습니다
 
-![](./images/2-5.png)
+![image](./images/2-5.png)
