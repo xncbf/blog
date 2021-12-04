@@ -1,5 +1,5 @@
 ---
-title: git flow 잘못 쓰고 있었다 - azure devops 에서 권장하는 브랜치 전략
+title: git flow 회고 - azure devops 에서 권장하는 브랜치 전략
 date: 2021-04-19 10:04:75
 category: dev
 thumbnail: { thumbnailSrc }
@@ -54,7 +54,7 @@ merge 를 했으니 이미 develop 에 반영된 상태이기 때문에 `git flo
 
 # trunk based development
 
-[trunk based development](https://trunkbaseddevelopment.com/) 는 [azure devops 에서 추천하는 개발 전략](https://docs.microsoft.com/en-us/azure/devops/learn/devops-at-microsoft/release-flow)입니다
+[trunk based development](https://trunkbaseddevelopment.com/) 는 [azure devops 에서 추천했던 개발 전략](https://docs.microsoft.com/en-us/azure/devops/learn/devops-at-microsoft/release-flow)입니다
 
 요약하자면 다음과 같습니다
 
@@ -81,7 +81,6 @@ merge 를 했으니 이미 develop 에 반영된 상태이기 때문에 `git flo
 1. 3주 후 새로운 스프린트에 기능 추가를 마치면 배포하기 위해 `releases/n+1` 브랜치를 만들고 배포합니다.
 2. 이 상황에서 핫픽스가 발생하는 경우 n 브랜치와 n+1 브랜치에 둘 다 배포합니다.
 3. 스프린트 배포가 완료되면 n 브랜치 이전의 브랜치는 완전히 버려집니다.
-
 
 # 결론
 
