@@ -3,7 +3,7 @@ title: micro service 도입기
 date: 2021-12-03 17:12:06
 category: msa
 thumbnail: { thumbnailSrc }
-draft: false
+draft: true
 ---
 
 팀내에서 새로 시작하는 프로젝트에 msa 를 도입하게 되면서 느꼈거나 생각했던 점들을 적어보려고 합니다.
