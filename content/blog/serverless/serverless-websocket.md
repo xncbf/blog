@@ -3,7 +3,7 @@ title: python serverless websocket 서버 만들기 1부
 date: 2021-12-11 14:12:89
 category: serverless
 thumbnail: './images/serverless-websocket-0.png'
-draft: true
+draft: false
 ---
 
 ![thumbnail](./images/serverless-websocket-0.png)
@@ -84,6 +84,7 @@ provider:
   lambdaHashingVersion: '20201221'
   region: ap-northeast-2
 
+functions:
   ping:
     handler: handler.ping
     events:
@@ -104,13 +105,13 @@ def ping(event, context):
 ```
 
 이제 간단한 ping 함수를 배포할 준비가 되었다.  
-앱을 배포해보겠다.
+다음 명령어로 앱을 배포해보자.
 
 ```zsh
 serverless deploy
 ```
 
-아래처럼 콘솔에 표시될것이다
+아래처럼 콘솔에 표시될것이다.
 
 ```zsh
 Serverless: Running ...
@@ -206,9 +207,14 @@ serverless plugin install -n serverless-python-requirements
 
 serverless.yml 맨 아래에 다음줄을 추가한다.
 
-```zsh
+```yml
 plugins:
   - serverless-python-requirements
+
+custom:
+  pythonRequirements:
+    dockerizePip: false
+    noDeploy: []
 ```
 
 pipenv 로 boto3 를 설치한다.
@@ -232,7 +238,7 @@ serverless.yml
 ## Websocket connection function 작성
 
 이제 모든 준비가 끝났다.  
-소켓이 연결하고 끊길때 작동하는 함수를 작성해보겠다.  
+소켓이 연결하고 끊길때 작동하는 함수를 작성한다.  
 handler.py 에 다음을 추가해준다.
 
 ```python
@@ -256,6 +262,10 @@ def connection_manager(event, context):
         table = dynamodb.Table("serverless-websocket-connections")
         table.delete_item(Key={"connection_id": connection_id})
         return {"statusCode": 200, "body": "Disconnect successful."}
+    else:
+        # 정의되지 않은 이벤트 타입인 경우
+        logger.error("Connection manager received unrecognized eventType '{}'")
+        return {"statusCode": 500, "body": "Unrecognized eventType."}
 ```
 
 websocket 연결을 허용하기 위해 serverless.yml 에 다음을 추가해준다.
@@ -298,3 +308,146 @@ def default_message(event, context):
     logger.info("Unrecognized WebSocket action received.")
     return {"statusCode": 400, "body": "Unrecognized WebSocket action."}
 ```
+
+## 메세지 전송
+
+메세지 전송을 위해 다음 코드를 `handler.py` 에 추가한다.  
+다음은 모든 연결에 broadcast 하는 예제이다.
+
+```python
+import json
+
+def send_message(event, context):
+
+    # request body 가 제대로 왔는지 체크
+    body = json.loads(event.get("body", ""))
+    for attribute in ["content"]:
+        if attribute not in body:
+            logger.debug("Failed: f'{attribute}' not in message dict.")
+            return {"statusCode": 400, "body": f"'{attribute}' not in message dict"}
+
+    # 모든 연결을 가져온다
+    table = dynamodb.Table("serverless-websocket-connections")
+    response = table.scan(ProjectionExpression="connection_id")
+    items = response.get("Items", [])
+    connections = [x["connection_id"] for x in items if "connection_id" in x]
+
+    # 모든 연결에게 broadcast
+    message = {"content": content}
+    logger.debug(f"Broadcasting message: {message}")
+    data = {"messages": [message]}
+    for connection_id in connections:
+        endpoint_url = f"https://{event['requestContext']['domainName']}/{event['requestContext']['stage']}"
+        gatewayapi = boto3.client("apigatewaymanagementapi", endpoint_url=endpoint_url)
+        gatewayapi.post_to_connection(ConnectionId=connection_id, Data=json.dumps(data).encode('utf-8'))
+    return {"statusCode": 200, "body": f"Message sent to all connections."}
+```
+
+마지막으로 `serverless.yml` 파일에 handler 를 추가해준다.
+앞에서부터 모두 따라왔다면 아래와 같아야 한다.
+
+```yml
+service: serverless-websocket
+
+provider:
+  name: aws
+  runtime: python3.9
+  lambdaHashingVersion: '20201221'
+  region: ap-northeast-2
+
+  iamRoleStatements:
+    - Effect: 'Allow'
+      Action:
+        - 'execute-api:ManageConnections'
+      Resource:
+        - 'arn:aws:execute-api:*:*:**/@connections/*'
+
+    - Effect: 'Allow'
+      Action:
+        - 'dynamodb:PutItem'
+        - 'dynamodb:GetItem'
+        - 'dynamodb:UpdateItem'
+        - 'dynamodb:DeleteItem'
+        - 'dynamodb:BatchGetItem'
+        - 'dynamodb:BatchWriteItem'
+        - 'dynamodb:Scan'
+        - 'dynamodb:Query'
+      Resource:
+        - 'arn:aws:dynamodb:ap-northeast-2:*:*'
+functions:
+  connectionManager:
+    handler: src.handler.connection_manager
+    events:
+      - websocket:
+          route: $connect
+      - websocket:
+          route: $disconnect
+  defaultMessage:
+    handler: handler.default_message
+    events:
+      - websocket:
+          route: $default
+  sendMessage:
+    handler: handler.send_message
+    events:
+      - websocket:
+          route: sendMessage
+  ping:
+    handler: handler.ping
+    events:
+      - http:
+          path: ping
+          method: get
+
+plugins:
+  - serverless-python-requirements
+
+custom:
+  pythonRequirements:
+    dockerizePip: false
+    noDeploy: []
+```
+
+모두 완료되었다면 다시 배포해보자  
+이번엔 serverless 의 단축어인 sls 를 사용해보자
+
+```sh
+sls deploy
+```
+
+잘 배포되었다면 아까 배포했던것과는 다르게 endpoint 가 두줄일 것이다.
+
+```sh
+endpoints:
+  GET - https://{{your-host}}.execute-api.ap-northeast-2.amazonaws.com/dev/ping
+  wss://{{your-host}}.execute-api.ap-northeast-2.amazonaws.com/dev
+```
+
+웹소켓이 잘 동작하는지 확인하려면 `wscat` 을 설치하고 간단히 확인해 볼 수 있다.
+
+```sh
+npm install -g wscat
+```
+
+설치가 완료되면 아까 받았던 wss:// 엔드포인트를 아래에 사용해서 연결해보자
+
+```sh
+wscat -c wss://{{your-host}}.execute-api.ap-northeast-2.amazonaws.com/dev
+```
+
+연결이 성공적으로 완료되면 다음 액션을 보내 응답이 잘 오는지 확인한다.
+
+```sh
+{"action": "sendMessage", "content": "서버리스 웹소켓 API 테스트"}
+```
+
+## 1부 마무리
+
+python 으로 serverless 를 통해 websocket 서버를 만드는 예제를 따라해보았다.  
+만약 개인프로젝트로 사용중이라면 프리티어 한도가 꽤 높아서 과금될때까지 사용하기는 꽤 어려울것이다.  
+위 예제는 `lambda`, `api gateway`, `dynamodb` 를 사용했고 프리티어 한도는 아래와 같다.  
+한도를 모두 사용하더라도 100만 request 당 약 300원 꼴이니 매우 저렴하게 사용할 수 있다.
+
+![image](./images/serverless-websocket-2.png)
+
+2부에서는 jwt 토큰을 이용한 인증처리와 1:1 채팅, 메세지를 저장하고 최근 메세지를 불러오는 포스팅을 할 예정이다.
