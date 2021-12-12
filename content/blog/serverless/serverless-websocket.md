@@ -287,7 +287,7 @@ provider:
 ```yml
 functions:
   connectionManager:
-    handler: src.handler.connection_manager
+    handler: handler.connection_manager
     events:
       - websocket:
           route: $connect
@@ -376,7 +376,7 @@ provider:
         - 'arn:aws:dynamodb:ap-northeast-2:*:*'
 functions:
   connectionManager:
-    handler: src.handler.connection_manager
+    handler: handler.connection_manager
     events:
       - websocket:
           route: $connect
