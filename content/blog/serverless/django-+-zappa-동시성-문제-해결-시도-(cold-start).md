@@ -126,8 +126,9 @@ aws application-autoscaling put-scaling-policy --service-namespace lambda \
 
 zappa 에서 handler 를 호출하는 시점을 앞당기는 시도를 해보았다
 
-`LambdaHandler` 가 lazy load 되고 있어서 lambda 가 실행되기 전 concurrency 가 올라올때 실행될수있도록 변경해 보았더니 cold start 가 1초 미만으로 획기적으로 줄어들었다
-zappa 레포 주인이 업데이트를 잘 안해주어서 일단 해결될때까진 별도의 레파지토리로 운영하기로 했다
+`LambdaHandler` 가 lazy load 되고 있어서 lambda 가 실행되기 전 concurrency 가 올라올때 실행될수있도록 변경해 보았더니 cold start 가 1초 미만으로 획기적으로 줄어들었다  
+~~zappa 레포 주인이 업데이트를 잘 안해주어서 일단 해결될때까진 별도의 레파지토리로 운영하기로 했다~~  
+[내가 올린 PR 이 머지되었다!](https://github.com/zappa/Zappa/pull/982)
 
 ![](<./images/django-+-zappa-동시성-문제-해결-시도-(cold-start)-9.png>)
 
