@@ -43,7 +43,7 @@ lang: 'en'
 
 ### O2O 스마트오더 백엔드
 
-https://ara.live
+<https://ara.live>
 
 - 19.03 ~ current
 - AWS[lambda, api-gateway, s3, secret manager, route53, cloudfront, dynamodb, aurora rds, cloudformation], django, drf, python, mypy, unittest
@@ -84,8 +84,8 @@ https://ara.live
 
 ### 커머스 웹사이트
 
-https://ara.travelflan.com/  
-https://travelflan.com/
+<https://ara.travelflan.com/>  
+<https://travelflan.com/>
 
 - 17.06 ~ current
 - AWS(ec2, beanstalk, api-gateway, ecs), alicloud(docker, k8s), Django, drf, Celery, python, aurora(postgresql)
@@ -192,12 +192,12 @@ GitHub: <https://github.com/zappa/zappa>
 
 > 다양한 social oauth를 위한 3rd party 라이브러리
 
-GitHub: <https://github.com/zappa/zappa>
+GitHub: <https://github.com/pennersr/django-allauth>
 
 ### Contributes
 
-- [Added Daum OAuth2](https://github.com/pennersr/django-allauth/pull/1693)
-- [Naver's extract_common_fields should be deleted.](https://github.com/pennersr/django-allauth/pull/1617)
+- [Added Daum OAuth2](https://github.com/pennersr/django-allauth/pull/1617)
+- [Naver's extract_common_fields should be deleted.](https://github.com/pennersr/django-allauth/pull/1693)
 
 <br />
 
