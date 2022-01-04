@@ -14,7 +14,7 @@ draft: false
 - [trunk based development](#trunk-based-development)
   - [개발](#개발)
   - [릴리즈](#릴리즈)
-- [핫픽스](#핫픽스)
+  - [핫픽스](#핫픽스)
   - [스프린트 이동](#스프린트-이동)
 - [결론](#결론)
 
@@ -83,7 +83,7 @@ merge 를 했으니 이미 develop 에 반영된 상태이기 때문에 `git flo
 
 - `releases/n` 브랜치를 생성하고 이 브랜치에서 직접 배포합니다.
 
-## 핫픽스
+### 핫픽스
 
 1. 일반적인 개발 플로우와 동일하게 master 에서 분기를 만들고, 리뷰 후 master 에 머지합니다
 2. master 에서 가장 마지막에 릴리즈되었던 `releases/n` 브랜치로 해당 핫픽스만 체리픽합니다.
