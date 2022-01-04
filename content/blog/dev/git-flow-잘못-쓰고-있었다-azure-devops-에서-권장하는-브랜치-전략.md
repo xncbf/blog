@@ -6,6 +6,18 @@ thumbnail: { thumbnailSrc }
 draft: false
 ---
 
+- [개요](#개요)
+- [git flow 가 뭔가요?](#git-flow-가-뭔가요)
+- [왜 git flow 를 사용했나요?](#왜-git-flow-를-사용했나요)
+- [어떤 점이 안좋았나요?](#어떤-점이-안좋았나요)
+- [그럼 finish 만 안쓰면 되는거 아닌가요?](#그럼-finish-만-안쓰면-되는거-아닌가요)
+- [trunk based development](#trunk-based-development)
+  - [개발](#개발)
+  - [릴리즈](#릴리즈)
+- [핫픽스](#핫픽스)
+  - [스프린트 이동](#스프린트-이동)
+- [결론](#결론)
+
 ## 개요
 
 git 을 관리하는 기법이 정해진것은 없겠지만 그동안 제가 git flow 를 사용하면서 느꼈던점을 정리해 보려고 합니다

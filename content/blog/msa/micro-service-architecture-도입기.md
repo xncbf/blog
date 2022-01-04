@@ -6,6 +6,19 @@ thumbnail: { thumbnailSrc }
 draft: false
 ---
 
+- [msa 를 도입한 이유](#msa-를-도입한-이유)
+- [도입하기전 마음속으로 정했던 조건들](#도입하기전-마음속으로-정했던-조건들)
+- [프로젝트를 시작하며 고려했던것들](#프로젝트를-시작하며-고려했던것들)
+  - [서비스를 나누는 기준](#서비스를-나누는-기준)
+  - [git repogitory](#git-repogitory)
+  - [코드 관리](#코드-관리)
+  - [PR, 테스팅, build pipeline](#pr-테스팅-build-pipeline)
+  - [saas 서비스들](#saas-서비스들)
+- [기타 자잘하게 생각했던 부분들](#기타-자잘하게-생각했던-부분들)
+  - [web framework (django vs fastapi)](#web-framework-django-vs-fastapi)
+  - [test (unittest vs pytest)](#test-unittest-vs-pytest)
+- [마무리](#마무리)
+
 팀내에서 새로 시작하는 프로젝트에서 `architect`를 맡아 `msa` 를 도입하게 되면서 느꼈거나 생각했던 점들을 적어보려고 한다.
 
 ## msa 를 도입한 이유

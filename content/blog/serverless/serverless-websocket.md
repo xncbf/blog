@@ -8,6 +8,17 @@ draft: false
 
 ![thumbnail](./images/serverless-websocket-0.png)
 
+- [웹소켓 서버를 serverless 환경으로 선택하는 이유](#웹소켓-서버를-serverless-환경으로-선택하는-이유)
+- [사전 준비사항](#사전-준비사항)
+- [의존성 요구사항](#의존성-요구사항)
+- [aws credentials 설정](#aws-credentials-설정)
+- [프로젝트 폴더 생성, 의존성 설치](#프로젝트-폴더-생성-의존성-설치)
+- [간단한 ping 함수 배포](#간단한-ping-함수-배포)
+- [커넥션을 관리할 Database](#커넥션을-관리할-database)
+- [Websocket connection function 작성](#websocket-connection-function-작성)
+- [메세지 전송](#메세지-전송)
+- [1부 마무리](#1부-마무리)
+
 ## 웹소켓 서버를 serverless 환경으로 선택하는 이유
 
 > 절대 서버리스를 silver bullet 으로 생각하지 말자. 여러가지 선택지 중 한 가지일 뿐이다.  

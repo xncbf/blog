@@ -6,6 +6,24 @@ thumbnail: { thumbnailSrc }
 draft: false
 ---
 
+- [Zappa 란?](#zappa-란)
+- [발생한 문제점](#발생한-문제점)
+- [문제 발생 원인](#문제-발생-원인)
+  - [cold start](#cold-start)
+  - [그렇다면 나는 왜?](#그렇다면-나는-왜)
+- [시도해본것들](#시도해본것들)
+  - [efs](#efs)
+  - [프로젝트 사이즈 줄이기](#프로젝트-사이즈-줄이기)
+  - [container](#container)
+  - [프로비저닝된 동시성 구성](#프로비저닝된-동시성-구성)
+  - [프로비저닝 동시성을 오토스케일 컨트롤](#프로비저닝-동시성을-오토스케일-컨트롤)
+- [zappa 해킹](#zappa-해킹)
+- [lambda와 별개로 시도한것들](#lambda와-별개로-시도한것들)
+  - [RDS 의 read replication 을 생성](#rds-의-read-replication-을-생성)
+  - [최대한 모든 api 를 캐싱](#최대한-모든-api-를-캐싱)
+  - [RDS proxy 생성](#rds-proxy-생성)
+- [마무리](#마무리)
+
 ## Zappa 란?
 
 [zappa](https://github.com/zappa/Zappa) 는 파이썬 코드를 aws lambda 에서 쉽게 웹서비스 할 수 있도록 만들어주는 패키지이다

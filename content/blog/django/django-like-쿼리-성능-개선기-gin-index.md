@@ -6,6 +6,14 @@ thumbnail: { thumbnailSrc }
 draft: false
 ---
 
+- [문제 확인](#문제-확인)
+- [DEBUG](#debug)
+- [병목 지점 확인하기](#병목-지점-확인하기)
+- [속도 개선](#속도-개선)
+  - [timestamp 필드 인덱싱 해보기](#timestamp-필드-인덱싱-해보기)
+  - [tsvector 컬럼 생성](#tsvector-컬럼-생성)
+- [Django 에서 활용하기](#django-에서-활용하기)
+
 ## 문제 확인
 
 ---
