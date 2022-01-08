@@ -6,6 +6,8 @@ thumbnail: './images/micro-service-architecture-swagger-0.png'
 draft: false
 ---
 
+![thumbnail](./images/micro-service-architecture-swagger-0.png)
+
 - [개요](#개요)
 - [Swagger가 뭐죠?](#swagger가-뭐죠)
 - [OpenAPI는 또 뭔가요?](#openapi는-또-뭔가요)
