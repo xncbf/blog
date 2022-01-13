@@ -2,9 +2,11 @@
 title: pre-commit 으로 git hook 사용하기 with python
 date: 2022-01-13 20:01:30
 category: git
-thumbnail: { thumbnailSrc }
+thumbnail: ./images/pre-commit-thumbnail.png
 draft: false
 ---
+
+![image](./images/pre-commit-thumbnail.png)
 
 - [git hook 이란?](#git-hook-이란)
 - [pre-commit 이란?](#pre-commit-이란)
