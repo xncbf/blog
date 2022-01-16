@@ -1,7 +1,7 @@
 ---
 title: 'about'
 date: 2021-11-10 13:21:13
-lang: 'ko'
+lang: 'en'
 ---
 
 # 김준환
