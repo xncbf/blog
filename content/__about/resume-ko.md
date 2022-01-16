@@ -35,13 +35,13 @@ lang: 'ko'
 
 ## FreeD Group (travelflan)
 
-|              |                                  |
-| -----------: | -------------------------------- |
-|   **period** | 17.06 ~ current                  |
-| **position** | Backend Engineer                 |
-| **projects** | O2O 스마트오더, 여행챗봇, 커머스 |
+|              |                                   |
+| -----------: | --------------------------------- |
+|   **period** | 17.06 ~ current                   |
+| **position** | Backend Engineer                  |
+| **projects** | O2O 스마트오더, 여행 챗봇, 커머스 |
 
-### O2O 스마트오더 백엔드
+### O2O 스마트오더 백엔드 리드
 
 <https://ara.live>
 
@@ -51,11 +51,12 @@ lang: 'ko'
 #### Description
 
 - 인프라 개발
-- 배포 자동화 파이프라인(CD) 구성
+- 테스트 자동화 파이프라인(CI) 구성 도입
+- 배포 자동화 파이프라인(CD) 구성 도입
 - 코드 리뷰 도입
 - TDD 도입
 - 서버리스 아키텍쳐 도입
-- 챗봇(갤럭시)용, 웹 클라이언트용 REST API 개발
+- 챗봇(안드로이드 RCS)용, 웹 클라이언트용 REST API 개발
 - 웹소켓 서버 개발
 
 ### O2O 스마트오더 POS 클라이언트
@@ -71,7 +72,7 @@ lang: 'ko'
 - 시리얼통신으로 영수증 프린트
 - 버전 업데이트시 자동 업데이터 개발
 
-### 챗봇과 통신하는 메시징 서버 (동작 중단)
+### 챗봇과 통신하는 메시징 서버
 
 - 17.06 ~ 19.03
 - AWS(elastic beanstalk, s3, route53, cloudfront, rds(postgresql)), django, drf, python
