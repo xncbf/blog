@@ -72,7 +72,7 @@ poetry-demo
 
 우리는 `poetry` 를 사용할 것이지만 `flit` 에 대해서도 살펴 보는 것을 권장합니다.
 
-`poetry` 가 `pep621` 를 공식적으로 지원하는지를 여기 [로드맵](https://github.com/python-poetry/roadmap/issues/3)에서 확인할 수 있습니다.
+`poetry` 가 `pep621` 를 공식적으로 지원하는지는 여기 [로드맵](https://github.com/python-poetry/roadmap/issues/3)에서 확인할 수 있습니다.
 
 ## 배포하기
 
@@ -212,7 +212,7 @@ jobs:
       - name: Publish
         env:
           POETRY_PYPI_TOKEN_PYPI: ${{ secrets.PYPI_TOKEN }}
-        run: bash scripts/publish.sh
+        run: poetry publish --build
       - name: Dump GitHub context
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
