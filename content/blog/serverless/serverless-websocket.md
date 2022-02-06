@@ -2,7 +2,7 @@
 title: python serverless websocket 서버 만들기 1부
 date: 2021-12-11 14:12:89
 category: serverless
-thumbnail: './images/serverless-websocket-0.png'
+thumbnail: ./images/serverless-websocket-0.png
 draft: false
 ---
 

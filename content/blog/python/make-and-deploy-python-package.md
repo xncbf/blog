@@ -2,7 +2,7 @@
 title: python 패키지 만들고 pypi에 배포하기
 date: 2022-01-23 13:01:62
 category: python
-thumbnail: './images/make-and-deploy-python-package-thumbnail.jpeg'
+thumbnail: ./images/make-and-deploy-python-package-thumbnail.jpeg
 draft: false
 ---
 
