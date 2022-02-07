@@ -2,7 +2,7 @@
 title: Micro Service Architecture Swagger 통합하기 (OpenAPI)
 date: 2022-01-07 21:01:06
 category: msa
-thumbnail: './images/micro-service-architecture-swagger-0.png'
+thumbnail: ./images/micro-service-architecture-swagger-0.png
 draft: false
 ---
 
