@@ -1,6 +1,5 @@
 {
-    "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-        "source.fixAll.markdownlint": true
-    }
+  "debug.allowBreakpointsEverywhere": true,
+  "files.autoSave": "afterDelay",
+  "editor.rulers": [120]
 }
