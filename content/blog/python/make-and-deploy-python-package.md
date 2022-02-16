@@ -102,7 +102,7 @@ poetry publish --build
 
 패키지 이름이 poetry-demo 라는 가정하에, main.py 를 생성하면 다음과 같은 구조가 됩니다.
 
-```sh
+``` {6}
 poetry-demo
 ├── pyproject.toml
 ├── README.rst

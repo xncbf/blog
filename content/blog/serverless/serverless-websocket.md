@@ -179,7 +179,7 @@ PONG!
 
 `dynamodb` 를 읽어올 권한을 위해 `serverless.yml` 파일에 권한 설정을 한다.
 
-```yml
+```yml {9-21}
 service: serverless-websocket
 
 provider:

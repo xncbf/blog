@@ -71,7 +71,7 @@ swagger:
 
 다음과 같이 `environment` 를 통해 `openapi.json` 경로를 연결시켜주었습니다.
 
-```yml
+```yml {8-17}
 # docker-compose.yml
 version: '3'
 ....
@@ -103,7 +103,7 @@ swagger:
 
 우리는 이미 다른 마이크로 서비스들을 라우팅하기 위해 `nginx` 를 `reverse proxy` 로써 사용하고 있었습니다.
 
-```conf
+```yml
 # nginx.conf
 ...
 http {
@@ -126,7 +126,7 @@ http {
 
 위와 같은 `nginx.conf` 설정 파일에 다음과 같이 `/docs/` 경로를 추가해 주었습니다.
 
-```conf
+```yml {13-15}
 # nginx.conf
 ...
 http {

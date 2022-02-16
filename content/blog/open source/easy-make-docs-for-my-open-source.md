@@ -120,7 +120,7 @@ mkdocs serve
 
 `mkdocs.yml` 파일을 다음과 같이 변경합니다.
 
-```yml
+```yml {3-4}
 site_name: My Docs
 
 theme:
