@@ -35,6 +35,11 @@ lang: 'ko'
 
 ## FreeD Group (travelflan)
 
+- [O2O 스마트오더 백엔드 리드](#o2o-스마트오더-백엔드-리드)
+- [O2O 스마트오더 POS 클라이언트](#o2o-스마트오더-pos-클라이언트)
+- [챗봇과 통신하는 메시징 서버](#챗봇과-통신하는-메시징-서버)
+- [커머스 웹사이트](#커머스-웹사이트)
+
 |              |                                   |
 | -----------: | --------------------------------- |
 |   **period** | 17.06 ~ current                   |
@@ -46,7 +51,8 @@ lang: 'ko'
 <https://ara.live>
 
 - 19.03 ~ current
-- AWS[lambda, api-gateway, s3, secret manager, route53, cloudfront, dynamodb, aurora rds, cloudformation], django, drf, python, mypy, unittest
+- AWS (lambda, api-gateway, s3, secret manager, route53, cloudfront, dynamodb, aurora rds)
+- django 3.2, DRF, python 3.8, mypy, unittest
 
 #### Description
 
@@ -58,6 +64,8 @@ lang: 'ko'
 - 서버리스 아키텍쳐 도입
 - 챗봇(안드로이드 RCS)용, 웹 클라이언트용 REST API 개발
 - 웹소켓 서버 개발
+
+---------------
 
 ### O2O 스마트오더 POS 클라이언트
 
@@ -72,6 +80,8 @@ lang: 'ko'
 - 시리얼통신으로 영수증 프린트
 - 버전 업데이트시 자동 업데이터 개발
 
+---------------
+
 ### 챗봇과 통신하는 메시징 서버
 
 - 17.06 ~ 19.03
@@ -82,6 +92,8 @@ lang: 'ko'
 - 클라이언트: 페이스북 메신저, 위챗, 자체 개발 메신저 위젯
 - 클라이언트와 통신하는 소켓 서버
 - NLP서버와 통신하는 서버 개발
+
+---------------
 
 ### 커머스 웹사이트
 
