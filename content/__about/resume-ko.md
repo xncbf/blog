@@ -33,7 +33,7 @@ lang: 'ko'
 
 # Experiences
 
-## FreeD Group (travelflan)
+## FreeD Soft / FreeD Group (A.K.A travelflan)
 
 - [O2O 스마트오더 백엔드 리드](#o2o-스마트오더-백엔드-리드)
 - [O2O 스마트오더 POS 클라이언트](#o2o-스마트오더-pos-클라이언트)
