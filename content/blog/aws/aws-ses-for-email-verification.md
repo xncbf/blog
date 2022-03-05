@@ -3,7 +3,7 @@ title: AWS SES 를 이용한 회원가입 email 인증 python 으로 구현하�
 date: 2022-03-05 15:03:18
 category: aws
 thumbnail: { thumbnailSrc }
-draft: false
+draft: true
 ---
 
 - [개요](#개요)
