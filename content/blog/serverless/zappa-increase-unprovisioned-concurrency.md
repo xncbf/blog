@@ -124,7 +124,7 @@ sleep 으로 동작중인 상태로 만들어놓고 비동기로 동시에 여�
 
 나는 sleep(0.1) 을 유지했을 때 대략 30정도로 유지되고있다.
 
-![image](./images/zappa-increase-unprovisioned-concurrency-2.png)
+![image](./images/zappa-increase-unprovisioned-concurrency-3.png)
 
 4분에 100개씩 호출한다고 하더라도 한달에 10,800 번밖에 호출되지 않는다 금액으로 따지자면 `3,072MB` 기준으로 `0.05 USD` (약 50 원) 정도이다.
 
