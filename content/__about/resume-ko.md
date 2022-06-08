@@ -34,7 +34,7 @@ lang: 'ko'
 # 목차
 
 - [경력](#experiences)
-  - [FreeD Soft / FreeD Group (A.K.A travelflan)](#freed-soft-freed-group-aka-travelflan)
+  - [FreeD Group](#freed-group)
   - [Ohmytrip](#ohmytrip)
   - [Asiana IDT](#asiana-idt)
   - [Justgo](#justgo)
@@ -48,7 +48,7 @@ lang: 'ko'
 
 # Experiences
 
-## FreeD Soft / FreeD Group (A.K.A travelflan)
+## FreeD Group
 
 - [구성원으로서의 역할](#구성원으로서의-역할)
 - [O2O 스마트오더 백엔드 리드](#o2o-스마트오더-백엔드-리드)
