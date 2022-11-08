@@ -1,5 +1,5 @@
 ---
-title: 2022년에 windows xp 를 지원하는 크로스 플랫폼 프로그램을 만든다는 것
+title: 2022년에 windows xp 를 지원하는 크로스 플랫폼 프로그램 
 date: 2022-04-24 21:04:54
 category: legacy
 thumbnail: { thumbnailSrc }
