@@ -1,0 +1,7 @@
+# Settings in the [build] context are global and are applied to
+
+[build]
+  command = "npm run build"
+
+[context.production.environment]
+  NODE_VERSION = "v14.19.1"
