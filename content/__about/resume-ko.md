@@ -6,22 +6,7 @@ lang: 'ko'
 
 # 김준환
 
-<div align="right"><sub><i>Last updated: 2022.04.10</i></sub></div>
-
-**저는 `______` 하는 엔지니어입니다.**
-
-1. 시작부터 끝까지 책임지는
-2. 문제를 정의하고 필요에 따라 기민하게 움직이는
-3. 개발에만 집중하지 않고 좋은 회사를 만들기 위해 적극적으로 노력하는
-4. 업무 프로세스 그리고 이를 뒷받침하는 조직 문화에 관심이 많은
-
-**저는 `______` 하는 조직을 선호합니다.**
-
-1. 투명한 의사결정이 이루어지고 공유되는
-2. 구성원 간 신뢰를 기반으로 자율적으로 일하는
-3. 불필요한 커뮤니케이션을 줄여 효율적으로 움직이는
-4. 하는 일이 조직의 밸류 체인에서 어떠한 임팩트를 갖는지 고민하는
-5. 기술이 비즈니스의 핵심 동력이며 제 코드가 비즈니스에 도움이 될 수 있는
+<div align="right"><sub><i>Last updated: 2023.05.05</i></sub></div>
 
 |             |                            |
 | :---------: | -------------------------- |
@@ -51,6 +36,8 @@ lang: 'ko'
 ## FreeD Group
 
 - [구성원으로서의 역할](#구성원으로서의-역할)
+- [Harmony 이커머스 솔루션](#Harmony-이커머스-솔루션)
+- [기업용 RCS 메세지 발송 시스템](#기업용-RCS-메세지-발송-시스템-(Rich-Communication-Service))
 - [O2O 스마트오더 백엔드 리드](#o2o-스마트오더-백엔드-리드)
 - [O2O 스마트오더 POS 클라이언트](#o2o-스마트오더-pos-클라이언트)
 - [챗봇과 통신하는 메시징 서버](#챗봇과-통신하는-메시징-서버)
@@ -60,14 +47,54 @@ lang: 'ko'
 | -----------: | --------------------------------- |
 |   **period** | 17.06 ~ current                   |
 | **position** | Backend Engineer                  |
-| **projects** | O2O 스마트오더, 여행 챗봇, 커머스 |
+| **projects** | RCS, O2O 스마트오더, 여행 챗봇, 커머스 |
 
 ### 구성원으로서의 역할
 
 - 백엔드 리드
+- DevOps, SRE
 - 아키텍트
 - aws 전체 관리자
 - 면접, 채용
+
+### Harmony 이커머스 솔루션
+
+<https://www.joinharmonycvm.com/ko>
+<https://shoppingeasy.co.kr/>
+
+- 22.05 ~ current
+- AWS (eks, secret manager, sqs, sns, route53, dynamodb, aurora rds, s3)
+- fastapi, pydantic, python 3.10, sqlalchemy, mypy, pytest, ruff, black, MeiliSearch, docker, k8s
+
+#### Description
+
+- 아키텍트
+- 데브옵스
+- CI, CD 구성
+- 모니터링 시스템 구성
+- 이커머스 상품 서비스 개발
+
+--------------
+
+### 기업용 RCS 메세지 발송 시스템 (Rich Communication Service)
+
+<https://www.rcsbizservice.com/ko/harmonyrcs-info>
+
+- 21.11 ~ current
+- AWS (eks, secret manager, route53, dynamodb, aurora rds)
+- django 4.2, django-ninja, pydantic, python 3.10, mypy, pytest, ruff, black, docker, k8s
+
+#### Description
+
+- 아키텍트
+- 데브옵스
+- CI, CD 구성
+- 모니터링 시스템 구성
+- RCS 호환되는 라이브러리 개발 [rcs-pydantic](https://github.com/xncbf/rcs-pydantic)
+- RCS 메세지 발송 시스템 개발
+- RCS 양방향 챗봇 개발
+
+----------------
 
 ### O2O 스마트오더 백엔드 리드
 
@@ -124,7 +151,7 @@ lang: 'ko'
 <https://ara.travelflan.com/>  
 <https://travelflan.com/>
 
-- 17.06 ~ current
+- 17.06 ~ 20.01
 - AWS(ec2, beanstalk, api-gateway, ecs), alicloud(docker, k8s), Django, drf, Celery, python, aurora(postgresql)
 
 #### Description
