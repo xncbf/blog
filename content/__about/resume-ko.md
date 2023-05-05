@@ -46,7 +46,7 @@ lang: 'ko'
 | -----------: | ----------------------------------------------------- |
 |   **period** | 17.06 ~ current                                       |
 | **position** | Backend Engineer IV                                   |
-|    **roles** | 백엔드 리드, DevOps, SRE, 아키텍트, AWS 전체 관리자, 면접, 채용 |
+|    **roles** | 백엔드 리드, DevOps, SRE, 아키텍트, AWS 전체 관리자, 기술인터뷰  |
 | **projects** | Harmony 이커머스, RCS, O2O 스마트오더, 여행 챗봇, 커머스       |
 
 
