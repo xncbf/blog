@@ -52,7 +52,7 @@ lang: 'ko'
 
 ### Harmony 이커머스 솔루션
 
-<https://www.joinharmonycvm.com/ko>
+<https://www.joinharmonycvm.com/ko>  
 <https://shoppingeasy.co.kr/>
 
 - 22.05 ~ current
