@@ -1,5 +1,5 @@
 ---
-title: git flow 회고 - azure devops 에서 권장하는 브랜치 전략
+title: git flow 회고 - 부제: 우리가 TBD로 전환한 이유
 date: 2021-04-19 10:04:75
 category: dev
 thumbnail: { thumbnailSrc }
@@ -10,7 +10,6 @@ draft: false
 - [git flow 가 뭔가요?](#git-flow-가-뭔가요)
 - [왜 git flow 를 사용했나요?](#왜-git-flow-를-사용했나요)
 - [어떤 점이 안좋았나요?](#어떤-점이-안좋았나요)
-- [그럼 finish 만 안쓰면 되는거 아닌가요?](#그럼-finish-만-안쓰면-되는거-아닌가요)
 - [trunk based development](#trunk-based-development)
   - [개발](#개발)
   - [릴리즈](#릴리즈)
@@ -42,23 +41,9 @@ git flow 는 git 을 관리하는 도구 중 하나입니다.
 
 ## 어떤 점이 안좋았나요?
 
-git flow 를 있는 그대로 사용하면 `git flow feature start` 와 같은 명령어로 시작하고 `git flow feature finish` 로 닫아야 합니다.
+git flow 의 브랜치 생명주기는 TBD 에 비해 상대적으로 길고 개발 브랜치에 한번에 머지되는 코드의 양이 많기 때문에 충돌이 잦았고 머지할때 예상 못한 사이드 이펙트가 생겨났습니다.
 
-`git flow feature start` 를 하게되면 `develop` 브랜치에서 파생된 `feature` 브랜치가 생성되고
-
-`git flow feature finish` 를 하면 다시 `develop` 브랜치로 머지되는 방식입니다.
-
-그런데 저희 팀은 `azure devops` 에서 직접 리뷰된 코드를 merge하게 되면서 문제가 발생했습니다.
-
-merge 를 했으니 이미 develop 에 반영된 상태이기 때문에 `git flow feature finish` 를 할 수 없게 됩니다.
-
-`hotfix` 또는 `release` 브랜치를 `master` 에 직접 머지해야 한다는 불안감도 있었습니다.
-
-## 그럼 finish 만 안쓰면 되는거 아닌가요?
-
-이런 문제를 겪으면서 git flow 를 쓰는게 맞는것인가 하는 근본적인 의문점이 생겼습니다.
-
-브랜치를 생성하는건 굳이 `git flow feature start` 를 하지 않아도 `git checkout -b feature/*` 를 하면 되기 때문입니다.
+개발속도가 상당히 저해되었습니다.
 
 그리고 쓸모가 없는 master 브랜치에 대한 의문점도 함께 생겨났습니다
 
@@ -99,6 +84,8 @@ merge 를 했으니 이미 develop 에 반영된 상태이기 때문에 `git flo
 정확히 이해하지 못하고 무작정 따라한 결과 새로운 개발 전략을 도입하게 되었습니다.
 
 이제 trunk based development 전략을 사용하면 master 브랜치와 release 브랜치, feature 브랜치만 용도 명확하게 사용하게 될것입니다.
+
+이에 따라 개발 속도 증가, 배포 주기 감소를 기대해 볼 수 있게 되었습니다.
 
 이 배포 전략을 수개월 사용해보고 후기를 남기겠습니다.
 
