@@ -1,5 +1,5 @@
 ---
-title: git flow 회고 - 부제: 우리가 TBD로 전환한 이유
+title: "git flow 회고 - 부제: 우리가 TBD로 전환한 이유"
 date: 2021-04-19 10:04:75
 category: dev
 thumbnail: { thumbnailSrc }
