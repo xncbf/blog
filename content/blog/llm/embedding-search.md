@@ -34,7 +34,7 @@ draft: false
 
 ### 초기 접근: 기본적인 검색 방법의 한계
 
-처음에는 like 쿼리를 사용해 검색을 구현하려 했다. 하지만 이 방법은 속도가 느리다는 단점이 있었다.  
+처음에는 like 쿼리를 사용해 검색을 구현하려 했다. 하지만 이 방법은 인덱싱 없이는 속도가 너무 느리다는 단점이 있다.  
 
 django 에서 내장된 [TrigramSimilarity](https://docs.djangoproject.com/en/5.1/ref/contrib/postgres/search/#trigramsimilarity) 를 사용하는 방법으로 트라이그램 유사도 서치를 고려해봤지만, trgm 인덱스는 한국어를 지원하지 않아 사용할 수 없었다. 
 
@@ -60,7 +60,11 @@ pgvector를 사용하면 임베딩을 제외한 모든 부분에서 외부 서�
 
 처음에는 의존도를 이유로 PostgreSQL에서 최대한 많은 기능을 구현하고 싶었다.
 
-하지만 BM25는 PostgreSQL에서 직접 지원하는 익스텐션이 없어서 별도의 서버가 필요했다. 이런 상황에서 [Pinecone](https://www.pinecone.io/)이라는 외부 서비스를 고려하게 되었다.
+하지만 BM25는 PostgreSQL에서 직접 지원하는 익스텐션이 없어서 별도의 서버가 필요했다.
+
+보통은 ElasticSearch나 Solr를 사용하지만, 클러스터링 비용이 부담스러웠다.
+
+이런 상황에서 [Pinecone](https://www.pinecone.io/)이라는 외부 서비스를 고려하게 되었다.
 
 ### 구현 과정의 어려움
 
