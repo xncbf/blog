@@ -6,7 +6,7 @@ lang: 'ko'
 
 # 김준환
 
-<div align="right"><sub><i>Last updated: 2023.05.05</i></sub></div>
+<div align="right"><sub><i>Last updated: 2024.07.31</i></sub></div>
 
 |             |                            |
 | :---------: | -------------------------- |
