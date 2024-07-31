@@ -243,6 +243,14 @@ GitHub: <https://github.com/xncbf/rcs-pydantic>
 
 저자
 
+## Python
+Github: <https://github.com/python/cpython>
+
+### Contributes
+
+- [gh-107895: Fix test_asyncio.test_runners when run it in CPython's "development mode"](https://github.com/python/cpython/pull/108168)
+- [gh-107910 Update not needing newline error message](https://github.com/python/cpython/pull/107928)
+
 ## Django
 
 > Deadline 이 있는 완벽주의자를 위한 웹 프레임워크.
