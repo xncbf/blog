@@ -63,12 +63,12 @@ lang: 'ko'
 
 #### Description
 
-- 파이프라인 성능/비용 개선 [관련 블로그 글](https://pypy.dev/dev/vmss/)
+- 파이프라인 성능/비용 개선 [[관련 블로그 글]](https://pypy.dev/dev/vmss/)
 - ecs 환경에서 eks 환경으로 무중단 마이그레이션
 - newrelic apm 모니터링 구성
 - CI/CD 환경 구성
 - 데이터베이스 모델링 및 REST API 개발
-- swagger 통합 문서 구성 [관련 블로그 글](https://pypy.dev/msa/micro-service-architecture-swagger-%ED%86%B5%ED%95%A9%ED%95%98%EA%B8%B0-(openapi)/)
+- swagger 통합 문서 구성 [[관련 블로그 글]](https://pypy.dev/msa/micro-service-architecture-swagger-%ED%86%B5%ED%95%A9%ED%95%98%EA%B8%B0-(openapi)/)
 
 --------------
 
@@ -85,11 +85,11 @@ lang: 'ko'
 
 #### Description
 
-- 전체 시스템 구성도와 속도 / 중복발송 등 이슈 해결 [관련 블로그 글](https://pypy.dev/resume/rcs-messaging/)
-- lambda 콜드스타트 개선 [관련 블로그 글](https://pypy.dev/serverless/django-+-zappa-%EB%8F%99%EC%8B%9C%EC%84%B1-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0-%EC%8B%9C%EB%8F%84-(cold-start)/)
+- 전체 시스템 구성도와 속도 / 중복발송 등 이슈 해결 [[관련 블로그 글]](https://pypy.dev/resume/rcs-messaging/)
+- lambda 콜드스타트 개선 [[관련 블로그 글]](https://pypy.dev/serverless/django-+-zappa-%EB%8F%99%EC%8B%9C%EC%84%B1-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0-%EC%8B%9C%EB%8F%84-(cold-start)/)
 - lambda 환경에서 eks 환경으로 무중단 마이그레이션
 - CI/CD 환경 구성
-- aws 경보 구성 [관련 블로그 글](https://pypy.dev/aws/sending-traffic-alert-to-messenger/)
+- aws 경보 구성 [[관련 블로그 글]](https://pypy.dev/aws/sending-traffic-alert-to-messenger/)
 - newrelic apm 모니터링 및 경보 구성
 - RCS 호환되는 라이브러리 개발 [rcs-pydantic](https://github.com/xncbf/rcs-pydantic)
 - 데이터베이스 모델링 및 REST API 개발
@@ -184,7 +184,7 @@ QR 코드와 nfc 태그를 통한 주문 시스템을 제공하는 B2B 솔루션
 #### Description
 
 - 모든 부분 혼자 개발했습니다. (기여도 100%)
-- 임베딩 검색 기능 구현 [관련 블로그 글](https://pypy.dev/llm/embedding-search/)
+- 임베딩 검색 기능 구현 [[관련 블로그 글]](https://pypy.dev/llm/embedding-search/)
 
 
 ## 오픈소스 기여
