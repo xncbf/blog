@@ -1,12 +1,12 @@
 ---
 title: 'about'
-date: 2021-11-10 13:21:13
+date: 2024-08-15 13:21:13
 lang: 'ko'
 ---
 
 # 김준환
 
-<div align="right"><sub><i>Last updated: 2024.07.31</i></sub></div>
+<div align="right"><sub><i>Last updated: 2024.08.15</i></sub></div>
 
 |             |                            |
 | :---------: | -------------------------- |
@@ -16,96 +16,114 @@ lang: 'ko'
 
 <br />
 
-# 목차
+# 소개
 
-- [경력](#experiences)
-  - [FreeD Group](#freed-group)
-- [오픈소스 기여](#open-sources)
-  - [django-dynamodb-cache](#django-dynamodb-cache)
-  - [rcs-pydantic](#rcs-pydantic)
-  - [Python](#python)
-  - [Django](#django)
-  - [Zappa](#zappa)
-  - [Django-allauth](#django-allauth)
+백엔드 엔지니어 김준환입니다.
+서비스를 만드는것을 좋아하고 최근에는 백엔드 엔지니어로서 다양한 도메인에 대한 경험을 쌓았습니다.
+사이드 프로젝트와 오픈소스 기여를 통해 다양한 기술에 대한 이해를 높이고 있습니다.
 
-# Experiences
+# 핵심 역량
 
-## FreeD Group
+여행, 커머스, 챗봇, 메세지 발송, 테이블 오더 등 다양한 도메인을 거치면서 백엔드 엔지니어로서 MAU 30만, DAU 15만 이상의 이커머스 분산시스템에 대한 경험을 쌓았습니다.
+백엔드 파트 리드로서 각 프로젝트당 3명의 팀원과 협업하며 프로젝트를 진행하였습니다.
+백엔드 전체 서비스의 클라우드 인프라를 관리하고 있습니다.
+개발 프로세스 개선을 위해 CI/CD 도입, 코드 리뷰 도입, TDD 도입 등을 진행하였습니다.
+모니터링 시스템(APM)을 구성하고 경보 시스템을 구성하였습니다.
+테크니컬 인터뷰를 담당하여 100회 이상 진행했습니다.
+
+
+# Experience
+
+## 프리디소프트
 
 |              |                                                       |
 | -----------: | ----------------------------------------------------- |
 |   **period** | 17.06 ~ current                                       |
 | **position** | Backend Engineer IV                                   |
-|    **roles** | 백엔드 리드, DevOps, SRE, 아키텍트, AWS 전체 관리자, 기술인터뷰  |
-| **projects** | Harmony 이커머스, RCS, O2O 스마트오더, 여행 챗봇, 커머스       |
+|    **roles** | 백엔드 프로젝트 파트 리드  |
+| **projects** | 커머스, RCS, 테이블오더, 챗봇                               |
 
 
 ### Harmony 이커머스 솔루션
 
-<https://www.joinharmonycvm.com/ko>  
-<https://shoppingeasy.co.kr/>
+이커머스 마켓을 쉽게 구성할 수 있게 도와주는 기업용 커머스 B2B 솔루션
+아래 사이트 외에도 수십개의 사이트를 운영중입니다.
 
-- 22.05 ~ current
-- AWS (eks, secret manager, sqs, sns, route53, dynamodb, aurora rds, s3)
-- fastapi, pydantic, python 3.10, sqlalchemy, mypy, pytest, ruff, black, MeiliSearch, docker, k8s
+- [현대카드 M포인트몰](https://shoppingeasy.co.kr/)
+- [BMW 고객용 쇼핑몰](https://bmwjoymall.com/) (BMW 앱에서만 접근가능)
+- KB PAY 구독몰 (KB PAY 앱에서만 접근가능)
+- [농카 구독몰](https://nongca.co.kr) (농협카드 앱에서만 접근가능)
+- [토이플러스](https://toyplus.co.kr/)
+- [온누리쇼핑](https://onnurishop.co.kr/)
+
+|              |                                                       |
+| -----------: | ----------------------------------------------------- |
+|   **period** | 22.05 ~ current                                       |
+| **tech stack** | fastapi, sqlalchemy, python, k8s, AWS                          |
+|    **roles** | 백엔드 프로젝트 파트 리드 (기여도 10%) |
 
 #### Description
 
-- 아키텍트 (인프라)
-- 데브옵스
-- CI, CD 구성
-- 모니터링 시스템 구성
-- 이커머스 상품 서비스 디비 모델링
-- 이커머스 상품 서비스 REST API 개발
+- 파이프라인 성능/비용 개선 [관련 블로그 글](https://pypy.dev/dev/vmss/)
+- ecs 환경에서 eks 환경으로 무중단 마이그레이션
+- newrelic apm 모니터링 구성
+- CI/CD 환경 구성
+- 데이터베이스 모델링 및 REST API 개발
+- swagger 통합 문서 구성 [관련 블로그 글](https://pypy.dev/msa/micro-service-architecture-swagger-%ED%86%B5%ED%95%A9%ED%95%98%EA%B8%B0-(openapi)/)
 
 --------------
 
 ### 기업용 RCS 메세지 발송 시스템 (Rich Communication Service)
 
+일일 1000만 건 이상의 메시지 처리 능력을 갖춘 기업용 양방향 문자메세지 발송 시스템
 <https://www.rcsbizservice.com/ko/harmonyrcs-info>
 
-- 21.11 ~ current
-- AWS (eks, secret manager, route53, dynamodb, aurora rds)
-- django 4.2, django-ninja, pydantic, python 3.10, mypy, pytest, ruff, black, docker, k8s
+|              |                                                       |
+| -----------: | ----------------------------------------------------- |
+|   **period** | 21.11 ~ current                                       |
+| **tech stack** | django, django-ninja, k8s, AWS                          |
+|    **roles** | 백엔드 프로젝트 리드 (기여도 30%) |
 
 #### Description
 
-- 아키텍트 (인프라)
-- 데브옵스
-- CI, CD 구성
-- 모니터링 시스템 구성
+- 전체 시스템 구성도와 속도 / 중복발송 등 이슈 해결 [관련 블로그 글](https://pypy.dev/resume/rcs-messaging/)
+- lambda 콜드스타트 개선 [관련 블로그 글](https://pypy.dev/serverless/django-+-zappa-%EB%8F%99%EC%8B%9C%EC%84%B1-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0-%EC%8B%9C%EB%8F%84-(cold-start)/)
+- lambda 환경에서 eks 환경으로 무중단 마이그레이션
+- CI/CD 환경 구성
+- aws 경보 구성 [관련 블로그 글](https://pypy.dev/aws/sending-traffic-alert-to-messenger/)
+- newrelic apm 모니터링 및 경보 구성
 - RCS 호환되는 라이브러리 개발 [rcs-pydantic](https://github.com/xncbf/rcs-pydantic)
-- RCS 메세지 발송 시스템 디비 모델링, REST API 개발
-- RCS 양방향 챗봇 디비 모델링, REST API 개발
-
+- 데이터베이스 모델링 및 REST API 개발
 ----------------
 
-### O2O 스마트오더 백엔드 리드
+### 테이블오더 솔루션 (오더홉)
 
-<https://arabiz.live>
+QR 코드와 nfc 태그를 통한 주문 시스템을 제공하는 B2B 솔루션
 
-- 19.03 ~ current
-- AWS (lambda, api-gateway, s3, secret manager, route53, cloudfront, dynamodb, aurora rds)
-- django 3.2, DRF, python 3.8, mypy, unittest
+|              |                                                       |
+| -----------: | ----------------------------------------------------- |
+|   **period** | 19.03 ~ current                                       |
+| **tech stack** | django, django-ninja, drf, python, k8s, AWS                          |
+|    **roles** | 백엔드 프로젝트 리드 (기여도 30%) |
 
 #### Description
 
-- 아키텍트
-- 데브옵스
-- 테스트 자동화 파이프라인(CI) 구성 도입
-- 배포 자동화 파이프라인(CD) 구성 도입
-- 코드 리뷰 도입
-- TDD 도입
+- CI/CD, 코드 리뷰, TDD 도입
 - 서버리스 아키텍쳐 도입
-- 챗봇(안드로이드 RCS), 웹 클라이언트 REST API 개발
 - 웹소켓 서버 개발
+- 데이터베이스 모델링 및 REST API 개발
 
 ---------------
 
-### O2O 스마트오더 POS 클라이언트
+### 테이블오더 (오더홉) POS 클라이언트
+지점의 POS 컴퓨터에 설치되는 프로그램
+주문을 받고, 영수증 출력, 주문 내역 조회 등의 기능을 제공
 
-- 19.03 ~ 20.03
-- nwjs 0.14.7, javascript(es5)
+|              |                                                       |
+| -----------: | ----------------------------------------------------- |
+|   **period** | 19.03 ~ 20.03                                       |
+| **tech stack** | nwjs, nodejs, javascript(es5)                           |
+|    **roles** | 백엔드 프로젝트 리드 (기여도 100%) |
 
 #### Description
 
@@ -119,97 +137,110 @@ lang: 'ko'
 
 ### 챗봇과 통신하는 메시징 서버
 
-- 17.06 ~ 19.03
-- AWS(elastic beanstalk, s3, route53, cloudfront, rds(postgresql)), django, drf, python
+|              |                                                       |
+| -----------: | ----------------------------------------------------- |
+|   **period** | 17.06 ~ 19.03                                       |
+| **tech stack** | django, drf, python, beanstalk                          |
+|    **roles** | 백엔드 엔지니어 (기여도 20%) |
 
 #### Description
 
-- 클라이언트: 페이스북 메신저, 위챗, 자체 개발 메신저 위젯
-- 클라이언트와 통신하는 소켓 서버
+- 페이스북 메신저, 위챗, 자체 개발 메신저 위젯에서 발송되는 메세지 핸들링
+- 클라이언트와 통신하는 소켓 서버 개발
 - NLP서버와 통신하는 서버 개발
 
 ---------------
 
-### 커머스 웹사이트
+### 자사 커머스 웹사이트
 
-<https://ara.travelflan.com/>  
-<https://travelflan.com/>
+|              |                                                       |
+| -----------: | ----------------------------------------------------- |
+|   **period** | 17.06 ~ 20.01                                       |
+| **tech stack** | django, drf, python, postgresql                          |
+|    **roles** | 백엔드 엔지니어 (기여도 20%) |
 
-- 17.06 ~ 20.01
-- AWS(ec2, beanstalk, api-gateway, ecs), alicloud(docker, k8s), Django, drf, Celery, python, aurora(postgresql)
 
 #### Description
 
-- REST API 서버 개발
+- 데이터베이스 모델링 및 REST API 개발
 - 웹소켓 서버 개발
 
 <br />
 
-# Open sources
+# 기타 활동
 
-## django-dynamodb-cache
+## 사이드 프로젝트
+
+### STUDIOFY (음악 연습실 찾는 앱)
+
+|              |                                                       |
+| -----------: | ----------------------------------------------------- |
+|   **period** | 24.01 ~ current                                        |
+| **tech stack** | django, aws lambda, cloudflare, react, nextjs, flutter                          |
+|    **site** | https://studiofy.kr |
+|    **android** | https://play.google.com/store/apps/details?id=kr.studiofy.studiofy&hl=ko |
+|    **ios** | https://apps.apple.com/kr/app/id6475640698 |
+
+## 오픈소스 기여
+
+### django-dynamodb-cache
 
 > django cache framework 와 호환되는 dynamodb 캐시 백엔드
 
 GitHub: <https://github.com/xncbf/django-dynamodb-cache>
 
-### Contributes
 
-저자
-
-## rcs-pydantic
+### rcs-pydantic
 
 > 한국 통신사 rcs 를 위한 pydantic 모델
 
 GitHub: <https://github.com/xncbf/rcs-pydantic>
 
-### Contributes
 
-저자
-
-## Python
+### Python
 
 Github: <https://github.com/python/cpython>
 
-### Contributes
+#### Contributes
 
 - [gh-107895: Fix test_asyncio.test_runners when run it in CPython's "development mode"](https://github.com/python/cpython/pull/108168)
 - [gh-107910 Update not needing newline error message](https://github.com/python/cpython/pull/107928)
 
-## Django
+### Django
 
 > Deadline 이 있는 완벽주의자를 위한 웹 프레임워크.
 
 GitHub: <https://github.com/django/django>
 
-### Contributes
+#### Contributes
 
 - postgres rangefields 의 범위 설명을 명확히 하는 [Ticket](https://code.djangoproject.com/ticket/31577)
 - [Translated content becomes ugly due to line-down on new admin side-bar](https://code.djangoproject.com/ticket/32141)
 - [Raise a descriptive error on update()/delete() operations following QuerySet.union(), intersection(), and difference().](https://code.djangoproject.com/ticket/31148)
 
-## Zappa
+### Zappa
 
 > python을 위한 serverless 프레임워크
 
 GitHub: <https://github.com/zappa/zappa>
 
-### Contributes
+#### Contributes
 
 - [Coldstart can be drastically reduced by calling LambdaHandler externally](https://github.com/zappa/Zappa/pull/982)
 
-## Django-allauth
+### Django-allauth
 
 > 다양한 social oauth를 위한 3rd party 라이브러리
 
 GitHub: <https://github.com/pennersr/django-allauth>
 
-### Contributes
+#### Contributes
 
 - [Added Daum OAuth2](https://github.com/pennersr/django-allauth/pull/1617)
 - [Naver's extract_common_fields should be deleted.](https://github.com/pennersr/django-allauth/pull/1693)
 
 <br />
+
 
 <div align="center" class="final">
 
