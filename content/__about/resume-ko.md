@@ -20,10 +20,6 @@ lang: 'ko'
 
 - [경력](#experiences)
   - [FreeD Group](#freed-group)
-  - [Ohmytrip](#ohmytrip)
-  - [Asiana IDT](#asiana-idt)
-  - [Justgo](#justgo)
-  - [GeoAngel robot tech](#geoangel-robot-tech)
 - [오픈소스 기여](#open-sources)
   - [django-dynamodb-cache](#django-dynamodb-cache)
   - [rcs-pydantic](#rcs-pydantic)
@@ -35,13 +31,6 @@ lang: 'ko'
 # Experiences
 
 ## FreeD Group
-
-- [Harmony 이커머스 솔루션](#Harmony-이커머스-솔루션)
-- [기업용 RCS 메세지 발송 시스템](#기업용-RCS-메세지-발송-시스템-(Rich-Communication-Service))
-- [O2O 스마트오더 백엔드 리드](#o2o-스마트오더-백엔드-리드)
-- [O2O 스마트오더 POS 클라이언트](#o2o-스마트오더-pos-클라이언트)
-- [챗봇과 통신하는 메시징 서버](#챗봇과-통신하는-메시징-서버)
-- [커머스 웹사이트](#커머스-웹사이트)
 
 |              |                                                       |
 | -----------: | ----------------------------------------------------- |
@@ -153,73 +142,6 @@ lang: 'ko'
 
 - REST API 서버 개발
 - 웹소켓 서버 개발
-
-## Ohmytrip
-
-|              |                     |
-| -----------: | ------------------- |
-|   **period** | 16.07 ~ 17.06       |
-| **position** | Full Stack Engineer |
-| **projects** | 사내 백오피스 개발  |
-
-### 사내 백오피스 개발
-
-자사 웹사이트 백오피스 개발 및 운영
-
-- 14.12 ~ 15.12
-- aws, elastic beanstalk, Django v1.11, python v3.4, javascript, mysql
-
-## Asiana IDT
-
-|              |                  |
-| -----------: | ---------------- |
-|   **period** | 15.12 ~ 16.05    |
-| **position** | Query writer     |
-| **projects** | 산출용 쿼리 작성 |
-
-### 산출용 쿼리 작성
-
-보험사의 데이터베이스 오라클기반 대용량 DB 쿼리 작성
-
-- 15.12 ~ 16.05
-- Oracle RDBMS
-
-## Justgo
-
-|              |                     |
-| -----------: | ------------------- |
-|   **period** | 14.12 ~ 15.12       |
-| **position** | Full Stack Engineer |
-| **projects** | 사내 백오피스 개발  |
-
-### 사내 백오피스 개발
-
-자사 웹사이트 백오피스 개발 및 운영
-
-- 14.12 ~ 15.12
-- ASP.NET, C#, javascript, MSSQL
-
-## GeoAngel robot tech
-
-|              |                                             |
-| -----------: | ------------------------------------------- |
-|   **period** | 10.04 ~ 11.04, 군복무, 13.04 ~ 14.12        |
-| **position** | Embedded Software Engineer                  |
-| **projects** | C++ 교육용 키트 제작, 회로 설계, 프로그래밍 |
-
-### C++ 교육용 키트 제작
-
-ATmega128 프로세서를 활용한 교육용 키트 제작
-
-- 10.04 ~ 14.12
-- C++
-
-#### Description
-
-- 서보모터, RC모터, 화면 입출력, RS232 시리얼통신, led 점멸 등 간단한 실험들을 할 수 있는 키트 제작
-  - 키트 제작을 위한 PCB 회로설계
-  - 키트 예제를 위한 프로그래밍
-  - 교육 자료 제작
 
 <br />
 
