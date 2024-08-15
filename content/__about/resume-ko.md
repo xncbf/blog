@@ -24,23 +24,23 @@ lang: 'ko'
 # 핵심 역량
 
 여행, 커머스, 챗봇, 메세지 발송, 테이블 오더 등 다양한 도메인을 거치면서 백엔드 엔지니어로서 MAU 30만, DAU 15만 이상의 분산시스템에 대한 경험을 쌓았습니다.  
-백엔드 파트 리드로서 각 프로젝트당 3명의 팀원과 협업하며 프로젝트를 진행하였습니다.  
-백엔드 전체 서비스의 클라우드 인프라를 관리하고 있습니다.  
-개발 프로세스 개선을 위해 CI/CD 도입, 코드 리뷰 도입, TDD 도입 등을 진행하였습니다.  
-모니터링 시스템(APM)을 구성하고 경보 시스템을 구성하였습니다.  
-테크니컬 인터뷰를 담당하여 100회 이상 진행했습니다.
+- 백엔드 파트 리드로서 각 프로젝트당 3명의 팀원을 리딩.  
+- 백엔드 전체 서비스의 클라우드 인프라를 관리.  
+- 개발 프로세스 개선을 위해 CI/CD 도입, 코드 리뷰 도입, TDD 도입 등을 진행.  
+- 모니터링 시스템(APM)을 구성하고 경보 시스템을 구성.  
+- 2020년도부터 테크니컬 인터뷰어.
 
 
-# Experience
+# 경력
 
 ## 프리디소프트
 
 |              |                                                       |
 | -----------: | ----------------------------------------------------- |
-|   **period** | 17.06 ~ current                                       |
-| **position** | Backend Engineer IV                                   |
-|    **roles** | 백엔드 프로젝트 파트 리드  |
-| **projects** | 커머스, RCS, 테이블오더, 챗봇                               |
+|   **기간** | 17.06 ~ current                                       |
+| **포지션** | Backend Engineer IV                                   |
+|    **역할** | 백엔드 프로젝트 파트 리드  |
+| **프로젝트** | 커머스, RCS, 테이블오더, 챗봇                               |
 
 
 ### Harmony 이커머스 솔루션
@@ -57,11 +57,11 @@ lang: 'ko'
 
 |              |                                                       |
 | -----------: | ----------------------------------------------------- |
-|   **period** | 22.05 ~ current                                       |
-| **tech stack** | fastapi, sqlalchemy, python, k8s, AWS                          |
-|    **roles** | 백엔드 프로젝트 파트 리드 (기여도 20%, 팀원 3명) |
+|   **기간** | 22.05 ~ current                                       |
+| **기술스택** | fastapi, sqlalchemy, python, k8s, AWS                          |
+|    **역할** | 백엔드 프로젝트 파트 리드 (기여도 20%, 팀원 3명) |
 
-#### Description
+#### 기여
 
 - 파이프라인 성능/비용 개선 [[관련 블로그 글]](https://pypy.dev/dev/vmss/)
 - ecs 환경에서 eks 환경으로 무중단 마이그레이션
@@ -79,11 +79,11 @@ lang: 'ko'
 
 |              |                                                       |
 | -----------: | ----------------------------------------------------- |
-|   **period** | 21.11 ~ current                                       |
-| **tech stack** | django, django-ninja, k8s, AWS                          |
-|    **roles** | 백엔드 프로젝트 리드 (기여도 30%, 팀원 3명) |
+|   **기간** | 21.11 ~ current                                       |
+| **기술스택** | django, django-ninja, k8s, AWS                          |
+|    **역할** | 백엔드 프로젝트 리드 (기여도 30%, 팀원 3명) |
 
-#### Description
+#### 기여
 
 - 전체 시스템 구성도와 속도 / 중복발송 등 이슈 해결 [[관련 블로그 글]](https://pypy.dev/resume/rcs-messaging/)
 - lambda 콜드스타트 개선 [[관련 블로그 글]](https://pypy.dev/serverless/django-+-zappa-%EB%8F%99%EC%8B%9C%EC%84%B1-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0-%EC%8B%9C%EB%8F%84-(cold-start)/)
@@ -102,11 +102,11 @@ QR 코드와 nfc 태그를 통한 주문 시스템을 제공하는 B2B 솔루션
 
 |              |                                                       |
 | -----------: | ----------------------------------------------------- |
-|   **period** | 19.03 ~ current                                       |
-| **tech stack** | django, django-ninja, drf, python, k8s, AWS                          |
-|    **roles** | 백엔드 프로젝트 리드 (기여도 30%, 팀원 3명) |
+|   **기간** | 19.03 ~ current                                       |
+| **기술스택** | django, django-ninja, drf, python, k8s, AWS                          |
+|    **역할** | 백엔드 프로젝트 리드 (기여도 30%, 팀원 3명) |
 
-#### Description
+#### 기여
 
 - CI/CD, 코드 리뷰, TDD 도입
 - 서버리스 아키텍쳐 도입
@@ -121,11 +121,11 @@ QR 코드와 nfc 태그를 통한 주문 시스템을 제공하는 B2B 솔루션
 
 |              |                                                       |
 | -----------: | ----------------------------------------------------- |
-|   **period** | 19.03 ~ 20.03                                       |
-| **tech stack** | nwjs, nodejs, javascript(es5)                           |
-|    **roles** | 백엔드 엔지니어 (기여도 50%, 팀원 2명) |
+|   **기간** | 19.03 ~ 20.03                                       |
+| **기술스택** | nwjs, nodejs, javascript(es5)                           |
+|    **역할** | 백엔드 엔지니어 (기여도 50%, 팀원 2명) |
 
-#### Description
+#### 기여
 
 - 지점에 설치되는 POS 클라이언트 개발
 - windows xp와의 호환성을 위해 vanilla javascript(es5) 로 개발
@@ -139,11 +139,11 @@ QR 코드와 nfc 태그를 통한 주문 시스템을 제공하는 B2B 솔루션
 
 |              |                                                       |
 | -----------: | ----------------------------------------------------- |
-|   **period** | 17.06 ~ 19.03                                       |
-| **tech stack** | django, drf, python, beanstalk                          |
-|    **roles** | 백엔드 엔지니어 (기여도 20%, 팀원 5명) |
+|   **기간** | 17.06 ~ 19.03                                       |
+| **기술스택** | django, drf, python, beanstalk                          |
+|    **역할** | 백엔드 엔지니어 (기여도 20%, 팀원 5명) |
 
-#### Description
+#### 기여
 
 - 페이스북 메신저, 위챗, 자체 개발 메신저 위젯에서 발송되는 메세지 핸들링
 - 클라이언트와 통신하는 소켓 서버 개발
@@ -155,12 +155,12 @@ QR 코드와 nfc 태그를 통한 주문 시스템을 제공하는 B2B 솔루션
 
 |              |                                                       |
 | -----------: | ----------------------------------------------------- |
-|   **period** | 17.06 ~ 20.01                                       |
-| **tech stack** | django, drf, python, postgresql                          |
-|    **roles** | 백엔드 엔지니어 (기여도 20%, 팀원 5명) |
+|   **기간** | 17.06 ~ 20.01                                       |
+| **기술스택** | django, drf, python, postgresql                          |
+|    **역할** | 백엔드 엔지니어 (기여도 20%, 팀원 5명) |
 
 
-#### Description
+#### 기여
 
 - 데이터베이스 모델링 및 REST API 개발
 - 웹소켓 서버 개발
@@ -175,13 +175,13 @@ QR 코드와 nfc 태그를 통한 주문 시스템을 제공하는 B2B 솔루션
 
 |              |                                                       |
 | -----------: | ----------------------------------------------------- |
-|   **period** | 24.01 ~ current                                        |
-| **tech stack** | django, aws lambda, cloudflare, react, nextjs, flutter                          |
+|   **기간** | 24.01 ~ current                                        |
+| **기술스택** | django, aws lambda, cloudflare, react, nextjs, flutter                          |
 |    **site** | https://studiofy.kr |
 |    **android** | https://play.google.com/store/apps/details?id=kr.studiofy.studiofy&hl=ko |
 |    **ios** | https://apps.apple.com/kr/app/id6475640698 |
 
-#### Description
+#### 기여
 
 - 모든 부분 혼자 개발했습니다. (기여도 100%)
 - 임베딩 검색 기능 구현 [[관련 블로그 글]](https://pypy.dev/llm/embedding-search/)
@@ -189,14 +189,14 @@ QR 코드와 nfc 태그를 통한 주문 시스템을 제공하는 B2B 솔루션
 
 ## 오픈소스 기여
 
-### django-dynamodb-cache
+### django-dynamodb-cache (저자)
 
 > django cache framework 와 호환되는 dynamodb 캐시 백엔드
 
 GitHub: <https://github.com/xncbf/django-dynamodb-cache>
 
 
-### rcs-pydantic
+### rcs-pydantic (저자)
 
 > 한국 통신사 rcs 를 위한 pydantic 모델
 
@@ -207,10 +207,13 @@ GitHub: <https://github.com/xncbf/rcs-pydantic>
 
 Github: <https://github.com/python/cpython>
 
-#### Contributes
+#### 기여
 
-- [gh-107895: Fix test_asyncio.test_runners when run it in CPython's "development mode"](https://github.com/python/cpython/pull/108168)
-- [gh-107910 Update not needing newline error message](https://github.com/python/cpython/pull/107928)
+- 이슈: test.test_asyncio.test_runners가 "개발 모드"에서 실패하는 이슈 [링크](https://github.com/python/cpython/issues/107895)  
+  PR: [gh-107895: Fix test_asyncio.test_runners when run it in CPython's "development mode"](https://github.com/python/cpython/pull/108168)
+
+- 이슈: 오류메세지의 가독성이 떨어지는 이슈 [링크](https://github.com/python/cpython/issues/107910)
+  PR: [gh-107910 Update not needing newline error message](https://github.com/python/cpython/pull/107928)
 
 ### Django
 
@@ -218,11 +221,11 @@ Github: <https://github.com/python/cpython>
 
 GitHub: <https://github.com/django/django>
 
-#### Contributes
+#### 기여
 
 - postgres rangefields 의 범위 설명을 명확히 하는 [Ticket](https://code.djangoproject.com/ticket/31577)
-- [Translated content becomes ugly due to line-down on new admin side-bar](https://code.djangoproject.com/ticket/32141)
-- [Raise a descriptive error on update()/delete() operations following QuerySet.union(), intersection(), and difference().](https://code.djangoproject.com/ticket/31148)
+- 한국어 세팅인 경우 관리자 모드에서 ui 가 깨지는 이슈 [Ticket](https://code.djangoproject.com/ticket/32141)
+- QuerySet.union(), interchange(), difference() 다음에 update()/delete() 작업에 대한 설명적 오류를 발생시키는 이슈. [Ticket](https://code.djangoproject.com/ticket/31148)
 
 ### Zappa
 
@@ -230,9 +233,10 @@ GitHub: <https://github.com/django/django>
 
 GitHub: <https://github.com/zappa/zappa>
 
-#### Contributes
+#### 기여
 
-- [Coldstart can be drastically reduced by calling LambdaHandler externally](https://github.com/zappa/Zappa/pull/982)
+- 이슈: 새롭게 올라온 동시성의 첫 호출에 콜드스타트가 8초 이상 걸리는 이슈
+  PR: [Coldstart can be drastically reduced by calling LambdaHandler externally](https://github.com/zappa/Zappa/pull/982)
 
 ### Django-allauth
 
@@ -240,10 +244,10 @@ GitHub: <https://github.com/zappa/zappa>
 
 GitHub: <https://github.com/pennersr/django-allauth>
 
-#### Contributes
+#### 기여
 
-- [Added Daum OAuth2](https://github.com/pennersr/django-allauth/pull/1617)
-- [Naver's extract_common_fields should be deleted.](https://github.com/pennersr/django-allauth/pull/1693)
+- Daum 로그인 기능 추가 [PR 링크](https://github.com/pennersr/django-allauth/pull/1617)
+- 더 이상 지원되지 않는 네이버 로그인에 대한 기능 수정 [PR 링크](https://github.com/pennersr/django-allauth/pull/1693)
 
 <br />
 
