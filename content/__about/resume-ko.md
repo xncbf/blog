@@ -235,7 +235,7 @@ GitHub: <https://github.com/zappa/zappa>
 
 #### 기여
 
-- 이슈: 새롭게 올라온 동시성의 첫 호출에 콜드스타트가 8초 이상 걸리는 이슈
+- 이슈: 새롭게 올라온 동시성의 첫 호출에 콜드스타트가 8초 이상 걸리는 이슈  
   PR: [Coldstart can be drastically reduced by calling LambdaHandler externally](https://github.com/zappa/Zappa/pull/982)
 
 ### Django-allauth
