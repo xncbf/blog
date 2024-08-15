@@ -212,7 +212,7 @@ Github: <https://github.com/python/cpython>
 - 이슈: test.test_asyncio.test_runners가 "개발 모드"에서 실패하는 이슈 [링크](https://github.com/python/cpython/issues/107895)  
   PR: [gh-107895: Fix test_asyncio.test_runners when run it in CPython's "development mode"](https://github.com/python/cpython/pull/108168)
 
-- 이슈: 오류메세지의 가독성이 떨어지는 이슈 [링크](https://github.com/python/cpython/issues/107910)
+- 이슈: 오류메세지의 가독성이 떨어지는 이슈 [링크](https://github.com/python/cpython/issues/107910)  
   PR: [gh-107910 Update not needing newline error message](https://github.com/python/cpython/pull/107928)
 
 ### Django
